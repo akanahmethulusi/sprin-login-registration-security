@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>REGISTRATION - CODE JAVA APP </title>
+	<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css" />
+</head>
+<body>
+	<div class="container text-center">
+		<div><center>
+			<h1>Online-Erstanmeldung SIGN UP</h1>
+			</center>
+		</div>
+		
+		<form th:action = "@{/process_register}" methode="post" style="max-width: 600px; margin: 0 auto;" th:object="${user}">
+			<div class="m-3"> 
+				<div class="form-group row">
+					<label class="col-form-label col-4">E-Mail</label>
+					<div class="col-8"><input type="email" class="form-control" th:field="*{email}" required /></div>
+				</div >
+			
+				<div class="form-group row">
+					<label class="col-form-label col-4">Kennwort</label>
+					<div class="col-8"><input type="password" class="form-control" th:field="*{password}" required min-length="6" max-length="10"/></div>
+				</div >
+			
+				<div class="form-group row">
+					<label class="col-form-label col-4">Vorname</label>
+					<div class="col-8"><input type="text" class="form-control" th:field="*{firstName}" required min-length="2" max-length="20"/></div>
+				</div >
+			
+				<div class="form-group row">
+					<label class="col-form-label col-4">Nachname</label>
+					<div class="col-8"><input type="text" class="form-control" th:field="*{lastName}" required min-length="2" max-length="20"/></div>
+				</div >
+			
+				<div>
+					<button type="submit" class="btn btn-primary" >Weiter</button>
+				</div>
+			</div>	
+		</form>		
+	</div>
+</body>
+</html>

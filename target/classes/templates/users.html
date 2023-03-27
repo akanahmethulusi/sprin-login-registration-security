@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+		<title>Alle Kunden - CODE JAVA APP </title>
+		<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css" />
+	</head>
+<body>
+	<div class="container text-center">
+		<div style="margin: 120px"></div >
+		<!--sonradan eklendi-->
+		<div>
+			<form th:action="@{/logout}" method="post">
+				
+				<p>Willkommen <b><span th:text="${#authentication.getPrincipal().getFullName()}"></span></b>
+				</p>
+				
+				
+				<input type="submit" value="Sign Out" />
+			</d!!form>
+		</div >
+		<div><center>
+			<h1>Alle Kundenlist</h1>
+			</center>
+		</div>
+		
+		<div>
+			<table class="table table-striped table-bordered">
+				<thead class="thead-dark">
+					<tr>
+						<th>Kunden ID</th>
+						<th>Email</th>
+						<th>Vorname</th>
+						<th>Nachname</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="user: ${listUsers}">
+					<td th:text="${user.id}">Kunden ID</td>
+					<td th:text="${user.email}">Email</td>
+					<td th:text="${user.firstName}">Vorname</td>
+					<td th:text="${user.lastName}">Nachname</td>
+					</tr>
+				</tbody>				
+		</div>
+		
+	</div>
+</body>
+</html >
