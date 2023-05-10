@@ -33,9 +33,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `email`, `first_name`, `last_name`, `password`) VALUES
-(1, 'akanmehlika@gmail.com', 'buglem', 'pickerl', 'sanane3'),
-(2, 'akanmuaz@gmail.com', 'Muaz', 'Akan', '$2a$10$Ku8nN6IQZ3cJWP10Xyeoju8AR79/yRLxIA3jeAwLo8wXfxbJjgsDq'),
-(3, 'akanahmet@gmail.com', 'Ahmet', 'Akan', '$2a$10$M9N/Y6cYHUIGwRhxpQLY8..N1MApD4uGRWH/MrUgu8tncqlrri9BK');
+(1, 'achen@gmail.com', 'buglem', 'pickerl', 'sanane3'),
+(2, 'martinluther@gmail.com', 'Martin', 'Luther', '$2a$10$Ku8nN6IQZ3cJWP10Xyeoju8AR79/yRLxIA3jeAwLo8wXfxbJjgsDq'),
+(3, 'samuelbeimann@gmail.com', 'Samuel', 'Beimann', '$2a$10$M9N/Y6cYHUIGwRhxpQLY8..N1MApD4uGRWH/MrUgu8tncqlrri9BK');
 
 --
 -- Indizes der exportierten Tabellen
